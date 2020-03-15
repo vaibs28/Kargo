@@ -13,12 +13,12 @@ if(len(str1)!=len(str2)):
 	print("false")
 	exit()
 
-dict = {}
-for i in range(len(str1)):
-	if str1[i] in dict:
-		if(dict[str1[i]]!=str2[i]):	
+dict = {}								#dictionary to store the mapping
+for i in range(len(str1)):				#iterate through all the characters in the strings
+	if str1[i] in dict:					#if character is in the dictionary
+		if(dict[str1[i]]!=str2[i]):		#checks if the character has already been mapped with the current str2 character, if no then prints false and terminates
 			print("false")
 			exit()
 	else:
-		dict[str1[i]] = str2[i]
-print("true")
+		dict[str1[i]] = str2[i]			#add the mapping to dictionary
+print("true")							#print true if all the characters can be mapped as per the conditions
